@@ -14,7 +14,7 @@ using namespace std;
 #define mod 1000000007
 #define FILENAME "f"
 
-const int MAXN = 1173;
+const int MAXN = 6000;
 
 double dis[MAXN][MAXN];
 
@@ -127,6 +127,7 @@ struct OneMinimumSpanningTree {
 
     vector<vector<int>> computeCandidateSet() {
         double totalWeight = primAlgorithm();
+        cout << totalWeight << endl;
         vector<vector<int>> candidateSet;
 
         // find the best two
@@ -204,7 +205,7 @@ double _dis(int i, int j){
 }
 
 int main() {
-    freopen("./tests/tc/pr1002.tsp", "r", stdin);
+    freopen("./tests/tc/ch150.tsp", "r", stdin);
 
     int num_node;
     cin >> num_node;
@@ -226,7 +227,7 @@ int main() {
 
     OneMinimumSpanningTree mst(0, num_node, chooseRate);
     vector<vector<int>> candidateSet = mst.computeCandidateSet();
-    ifstream inp("tests/opt/pr1002.opt.tour");
+    ifstream inp("tests/opt/ch150.opt.tour");
 
     vector<int> optimalSet;
     for (int i = 0; i < num_node; i++){
@@ -254,12 +255,12 @@ int main() {
         rank[ranked]++;
     }
     cout << fixed << setprecision(6) << average * 1.0 / num_node << endl;
-    for (int i = 0; i < num_node; i++){
-        cout << "Candidate of node " << i << " is: "; 
-        for (auto &v : candidateSet[i]){
-            cout << v << " ";
-        }
-        cout << endl;
-    }
+    // for (int i = 0; i < num_node; i++){
+    //     cout << "Candidate of node " << i << " is: "; 
+    //     for (auto &v : candidateSet[i]){
+    //         cout << v << " ";
+    //     }
+    //     cout << endl;
+    // }
 
 }

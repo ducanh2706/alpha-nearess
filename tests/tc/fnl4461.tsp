@@ -1,9 +1,4 @@
-NAME : fnl4461
-COMMENT : Die 5 neuen Laender Deutschlands (Ex-DDR) (Bachem/Wottawa)
-TYPE : TSP
-DIMENSION : 4461
-EDGE_WEIGHT_TYPE : EUC_2D
-NODE_COORD_SECTION
+4461 
     1    5639    6909
     2    5652    6142
     3    5654    6101
@@ -4465,4 +4460,3 @@ NODE_COORD_SECTION
  4459    9158    6901
  4460    9166    6932
  4461    9176    6953
-EOF
